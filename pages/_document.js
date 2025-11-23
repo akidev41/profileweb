@@ -16,8 +16,24 @@ export default function Document() {
         <meta name="author" content="Sawada Aki" />
         <meta name="robots" content="index, follow" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="EsRbNcag9i4y_8jQPI4MAtPpA5eIFM5SEZXVyonuJTU" />
+        
         {/* Canonical URL */}
         <link rel="canonical" href={siteUrl} />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9863L0NYD4"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9863L0NYD4');
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />
