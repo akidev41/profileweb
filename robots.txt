@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akidev41.github.io/profileweb/sitemap.xml
+
