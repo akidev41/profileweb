@@ -41,3 +41,48 @@ body {
 .star-frame.active {
   opacity: 1;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.gallery-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for gallery */
+.gallery-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Word breaking for long text with separators */
+.break-words-responsive {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: #fbbf24; /* Amber/yellow background */
+  color: #1a1a1a; /* Dark text for contrast */
+}
+
+::-moz-selection {
+  background-color: #fbbf24; /* Amber/yellow background */
+  color: #1a1a1a; /* Dark text for contrast */
+}

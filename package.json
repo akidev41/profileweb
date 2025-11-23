@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build",
-    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && touch out/.nojekyll && git add -f out/ && git commit -m 'Deploy to GitHub Pages' && git subtree split --prefix out -b gh-pages-local && git push origin gh-pages-local:gh-pages --force && git branch -D gh-pages-local"
   },
   "dependencies": {
     "next": "14.0.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-intersection-observer": "^10.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
