@@ -22,6 +22,12 @@ export default function Document() {
         {/* Canonical URL */}
         <link rel="canonical" href={siteUrl} />
         
+        {/* Favicon */}
+        <link rel="icon" href={`${siteUrl}favicon.ico`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${siteUrl}favicon-32x32.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${siteUrl}favicon-16x16.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${siteUrl}apple-touch-icon.png`} />
+        
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9863L0NYD4"></script>
         <script
